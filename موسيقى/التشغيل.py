@@ -67,7 +67,7 @@ async def ytdl(link):
         return 1, stdout.decode().split("\n")[0]
     else:
         return 0, stderr.decode()
-@Client.on_message(    filters.user(SUDO_USERS) & filters.command(["تشغيل"], prefixes=f"{HNDLR}"))
+@Client.on_message(    filters.user(SUDO_USERS) & filters.command(["ش"], prefixes=f"{HNDLR}"))
 @authorized_users_only
 async def play(client, m: Message):
     replied = m.reply_to_message
@@ -91,7 +91,7 @@ async def play(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/40c0ab31719a780e37b5c.jpg",
+                    photo="https://telegra.ph/file/65f9b2fb1dfd7be0ecf3e.jpg",
                     caption=f"""
 **🏷️ العنوان : [{songname}]({link})
 💬 ايدي المحادثه : {chat_id}
